@@ -1,0 +1,88 @@
+body{
+    background-color: lightblue;
+    margin: 0px;
+    padding: 0px;
+}
+
+#challenge{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.Study-Hours{
+     background-color: #93b1b5;
+     border: 2px solid black;
+     height: 200px;
+     width: 150px;
+}
+
+.Water-intake{
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+.input-with-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}    
+
+.btn {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.water-intake-text{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.count{
+     color: #007bff;
+}
+
+/* To-do */
+.Task-List{
+        background-color: #93b1b5;
+        border: 2px solid black;
+        height: 600px;
+        width: 500px;
+}
+
+#taskInput{
+  width: 400px;
+  height: 10px;
+  padding: 10px;
+}
+
+#addTask{
+   width: 70px;
+   height: 35px;
+}
+
+.Timer{
+     background-color: #93b1b5;
+     border: 2px solid black;
+     height: 200px;
+     width: 150px;
+}

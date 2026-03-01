@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Challenge 1</title>
+</head>
+<body>
+    <div id="challenge">
+        <div class="Study-Hours">
+            <label for="Study-Hours"></label>Study Hours 1-24:)
+            <input type="number" id="Study-Hours" name="Study-Hours" placeholder="Study Hours" min="1" max="24">
+            <button id="Save">Save</button>
+        </div>
+        <div class="Water-intake">
+             <h3>Water Intake</h3>   
+                <div class="input-with-btn">
+                   <button class="btn minus-btn">-</button>
+                    <div class="water-intake-text">
+                      Water Intake <span class="count">0</span>glass   
+                    </div>
+                  <button class="btn plus-btn">+</button>
+                </div>  
+        </div>
+        <div class="Task-List">
+            <input type="text" id="taskInput" placeholder="Add a task">
+            <button id="addTask">Add Task</button>
+            <ul id="tasklist"></ul>
+        </div>
+        <div class="Timer">
+            <input type="time" value="00:00" id="timerInput" placeholder="time">
+            <button id="startTimer">Start Timer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
