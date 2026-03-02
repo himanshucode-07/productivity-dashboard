@@ -49,3 +49,11 @@ addBtn.addEventListener("click", () => {
         li.remove();
       })
 });
+
+// Water Intake
+let minusBtn = document.querySelector(".minus-btn")
+let plusBtn = document.querySelector(".plus-btn")
+
+minusBtn.addEventListener("click", () => {
+  
+})
