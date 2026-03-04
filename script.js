@@ -61,3 +61,9 @@ plusBtn.addEventListener("click", () => {
   span.innerText = count;
 });
 
+minusBtn.addEventListener("click", () => {
+  if(count > 0) {
+     count--;
+  }
+  span.innerText = count;
+});
