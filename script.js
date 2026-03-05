@@ -54,6 +54,7 @@ addBtn.addEventListener("click", () => {
 let minusBtn = document.querySelector(".minus-btn")
 let plusBtn = document.querySelector(".plus-btn")
 let span = document.querySelector(".count");
+let resetBtn = document.querySelector(".resetBtn");
 
 let count = 0;
 plusBtn.addEventListener("click", () => {
@@ -66,4 +67,9 @@ minusBtn.addEventListener("click", () => {
      count--;
   }
   span.innerText = count;
+
+  resetBtn.addEventListener("click", () => {
+    count = 0;
+    span.innerText = count;
+  }) 
 });
