@@ -79,6 +79,7 @@ resetBtn.addEventListener("click", () => {
 let timerInput = document.querySelector("#timerInput");
 let startTimer = document.querySelector("#startTimer");
 let stopTimer = document.querySelector("#stopTimer");
+let resetTimer = document.querySelector(".reset");
 
 let timer = null;
 let endTime;
@@ -117,9 +118,15 @@ startTimer.addEventListener("click", () => {
         timerInput.value = `${h}:${m}:${s}`;
 
     },1000);
+    resetBtn.addEventListener("click", () => {
+  clearInterval(timer);
+timerInput.value = "00:00:00";
+}
+);
 
 });
 
 stopTimer.addEventListener("click", () => {
     clearInterval(timer);
 });
+
