@@ -80,6 +80,7 @@ let timerInput = document.querySelector("#timerInput");
 let startTimer = document.querySelector("#startTimer");
 let stopTimer = document.querySelector("#stopTimer");
 let resetTimer = document.querySelector(".reset");
+let emptyTimer = document.querySelector(".empty");
 
 let timer = null;
 let endTime;
@@ -121,6 +122,10 @@ startTimer.addEventListener("click", () => {
     resetBtn.addEventListener("click", () => {
   clearInterval(timer);
 timerInput.value = "00:00:00";
+}
+emptyTimer.addEventListener("click", () => {
+  clearInterval(timer);
+timerInput.value = "";
 }
 );
 
