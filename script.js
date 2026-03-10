@@ -119,19 +119,20 @@ startTimer.addEventListener("click", () => {
         timerInput.value = `${h}:${m}:${s}`;
 
     },1000);
-    resetBtn.addEventListener("click", () => {
-  clearInterval(timer);
-timerInput.value = "00:00:00";
-}
-emptyTimer.addEventListener("click", () => {
-  clearInterval(timer);
-timerInput.value = "";
-}
-);
-
 });
 
 stopTimer.addEventListener("click", () => {
     clearInterval(timer);
+});
+
+// Study Hours
+let StudyHours = document.querySelector("#Study-Hours");
+let SaveBtn = document.querySelector("#Save");
+let StudyStartedBtn = document.querySelector(".Study-Started");
+let breakTimeBtn = document.querySelector(".breakTime");
+ 
+StudyStartedBtn.addEventListener("click", () => {
+    let hours = Number(StudyHours.value);
+    breakTimeBtn.style.display = "block";
 });
 

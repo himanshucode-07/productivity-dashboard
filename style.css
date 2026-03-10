@@ -13,6 +13,7 @@ body{
   flex-direction: column;
 }
 
+/* Study Hours */
 .Study-Hours{
      background-color: #93b1b5;
      border: 2px solid black;
@@ -20,6 +21,11 @@ body{
      width: 150px;
 }
 
+.breakTime{
+   display: none;;
+}
+
+/* Water Intake */
 .Water-intake{
     align-items: center;
     justify-content: space-between;
