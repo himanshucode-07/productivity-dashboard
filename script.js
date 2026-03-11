@@ -130,9 +130,14 @@ let StudyHours = document.querySelector("#Study-Hours");
 let SaveBtn = document.querySelector("#Save");
 let StudyStartedBtn = document.querySelector(".Study-Started");
 let breakTimeBtn = document.querySelector(".breakTime");
+let resetSessionBtn = document.querySelector(".reset-session");
  
 StudyStartedBtn.addEventListener("click", () => {
     let hours = Number(StudyHours.value);
     breakTimeBtn.style.display = "block";
 });
 
+resetSessionBtn.addEventListener("click", () => {
+    StudyHours.value = "";
+    breakTimeBtn.style.display = "none";
+});
