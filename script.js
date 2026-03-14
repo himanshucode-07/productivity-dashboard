@@ -81,6 +81,7 @@ let startTimer = document.querySelector("#startTimer");
 let stopTimer = document.querySelector("#stopTimer");
 let resetTimer = document.querySelector(".reset");
 let emptyTimer = document.querySelector(".empty");
+let task = document.querySelector(".task-complete");
 
 let timer = null;
 let endTime;
@@ -123,6 +124,11 @@ startTimer.addEventListener("click", () => {
 
 stopTimer.addEventListener("click", () => {
     clearInterval(timer);
+});
+
+task.addEventListener("click", () => {
+    clearInterval(timer);
+    timerInput.value = "00:00:00";
 });
 
 // Study Hours
