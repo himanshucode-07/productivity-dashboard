@@ -55,29 +55,33 @@ let taskapp = new Tasklist();
 taskapp.init();
 
 // Water Intake
-let minusBtn = document.querySelector(".minus-btn")
-let plusBtn = document.querySelector(".plus-btn")
-let span = document.querySelector(".count");
-let resetBtn = document.querySelector(".resetBtn");
+// let minusBtn = document.querySelector(".minus-btn")
+// let plusBtn = document.querySelector(".plus-btn")
+// let span = document.querySelector(".count");
+// let resetBtn = document.querySelector(".resetBtn");
 
 
-let count = 0;
-plusBtn.addEventListener("click", () => {
-  count++;
-  span.innerText = count;
-});
+// let count = 0;
+// plusBtn.addEventListener("click", () => {
+//   count++;
+//   span.innerText = count;
+// });
 
-minusBtn.addEventListener("click", () => {
-  if(count > 0) {
-     count--;
-  }});
+// minusBtn.addEventListener("click", () => {
+//   if(count > 0) {
+//      count--;
+//   }});
 
   
-resetBtn.addEventListener("click", () => {
-  count = 0;
-  span.innerText = 0;
-  console.log("Reset button clicked");
-});
+// resetBtn.addEventListener("click", () => {
+//   count = 0;
+//   span.innerText = 0;
+//   console.log("Reset button clicked");
+// });
+import { WaterIntake } from "./Components/WaterIntake.js";
+
+let waterIntakeApp = new WaterIntake();
+waterIntakeApp.init();
 
 // Timer
 let timerInput = document.querySelector("#timerInput");
