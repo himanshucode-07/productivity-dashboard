@@ -3,6 +3,7 @@
             this.taskinput = document.querySelector("#taskInput");
             this.tasklist = document.querySelector("#tasklist");
             this.addBtn = document.querySelector("#addTask");
+            this.removeBtn = document.querySelector("#remove");
             this.tasks = [];
         }
         init() {
@@ -21,6 +22,9 @@
             completed: false
         });
 
+        this.removeBtn.addEventListener("click", () => {
+            console.log("this task is  remove")
+        })
 
         let li = document.createElement("li");
         li.innerText = value;
