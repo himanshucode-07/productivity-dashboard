@@ -1,49 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Challenge 1</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Study Hours  -->
     <div id="challenge">
-        <div class="Study-Hours">
-            <label for="Study-Hours"></label>Study Hours 1-24:)
-            <input type="number" id="Study-Hours" name="Study-Hours" placeholder="Study Hours" min="1" max="24">
-            <button id="Save">Save</button>
-            <button class="Study-Started">Study</button>
-            <button class="breakTime">Break</button>
-            <button class="reset-session">Reset Session</button>
+      <div class="Study-Hours">
+        <label for="Study-Hours"></label>Study Hours 1-24:)
+        <input
+          type="number"
+          id="Study-Hours"
+          name="Study-Hours"
+          placeholder="Study Hours"
+          min="1"
+          max="24"
+        />
+        <button id="Save">Save</button>
+        <button class="Study-Started">Study</button>
+        <button class="breakTime">Break</button>
+        <button class="reset-session">Reset Session</button>
+      </div>
+      <!--Water-Intake  -->
+      <div class="Water-intake">
+        <h3>Water Intake</h3>
+        <div class="input-with-btn">
+          <button class="btn minus-btn">-</button>
+          <div class="water-intake-text">
+            Water Intake <span class="count">0</span>glass
+          </div>
+          <button class="btn plus-btn">+</button>
+          <button class="resetBtn">reset</button>
         </div>
-        <!--Water-Intake  -->
-        <div class="Water-intake">
-             <h3>Water Intake</h3>   
-                <div class="input-with-btn">
-                   <button class="btn minus-btn">-</button>
-                    <div class="water-intake-text">
-                      Water Intake <span class="count">0</span>glass   
-                    </div>
-                  <button class="btn plus-btn">+</button>
-                  <button class="resetBtn">reset</button>
-                </div>  
-        </div>
-        <!-- Task-List -->
-        <div class="Task-List">
-            <input type="text" id="taskInput" placeholder="Add a task">
-            <button id="addTask">Add Task</button>
-            <button id="remove">Remove</button>
-            <ul id="tasklist"></ul>
-        </div>
-        <!-- Timer -->
-        <div class="Timer">
-            <input type="time" step="1" value="00:00:00" id="timerInput" placeholder="time">
-            <button id="startTimer">Start Timer</button>
-            <button id="stopTimer">Stop Timer</button>
-            <button class="task-complete">Complete Task</button>
-        </div>
+      </div>
+      <!-- Task-List -->
+      <div class="Task-List">
+        <input type="text" id="taskInput" placeholder="Add a task" />
+        <button id="addTask">Add Task</button>
+        <button id="remove">Remove</button>
+        <ul id="tasklist"></ul>
+      </div>
+      <!-- Timer -->
+      <div class="Timer">
+        <input
+          type="time"
+          step="1"
+          value="00:00:00"
+          id="timerInput"
+          placeholder="time"
+        />
+        <button id="startTimer">Start Timer</button>
+        <button id="stopTimer">Stop Timer</button>
+        <button class="task-complete">Complete Task</button>
+      </div>
+
+      <div id="taskPage"></div>
+      <div id="timerPage"></div>
+      <div id="waterPage"></div>
+      <div id="studyPage"></div>
     </div>
     <script type="module" src="script.js"></script>
-</body>
+  </body>
 </html>
