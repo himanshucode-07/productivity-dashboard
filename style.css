@@ -1,3 +1,11 @@
+#taskPage,
+#timerPage,
+#waterPage,
+#studyPage {
+  display: none;
+}
+
+
 body{
     background-color: lightblue;
     margin: 0px;
