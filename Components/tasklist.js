@@ -59,3 +59,10 @@
         });
     }
         }
+
+
+        // 
+        taskCard.addEventListener("click", () => {
+  challenge.style.display = "none";   // dashboard hide
+  taskPage.style.display = "block";   // task page show
+});
