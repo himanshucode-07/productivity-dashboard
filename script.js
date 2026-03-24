@@ -7,6 +7,13 @@ taskCard.addEventListener("click", () => {
   taskPage.style.display = "block";   // task page show
 });
 
+let backBtn = document.querySelector("#backBtn");
+
+backBtn.addEventListener("click", () => {
+  taskPage.style.display = "none";
+  challenge.style.display = "block";
+});
+
 //     // Task List App 
 import { Tasklist } from "./Components/tasklist.js";
 
