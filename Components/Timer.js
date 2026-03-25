@@ -5,12 +5,18 @@ export class Timer {
     this.stopTimer = document.querySelector("#stopTimer");
     this.resetTimer = document.querySelector(".reset");
     this.emptyTimer = document.querySelector(".empty");
+    this.result = document.querySelector(".result");
     this.task = document.querySelector(".task-complete");
 
     this.timer = null;
     this.endTime;
   }
   init() {
+
+    this.result.addEventListener("click", () => {
+      console.log("Prrint result")
+    })
+    // 
     this.startTimer.addEventListener("click", () => {
 
     let parts = this.timerInput.value.split(":");
