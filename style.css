@@ -3,9 +3,44 @@
 #waterPage,
 #studyPage {
   display: none;
+}body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
 }
 
+/* Dashboard layout */
+#challenge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+}
 
+/* Cards */
+.card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  
+  /* smooth animation */
+  transition: all 0.3s ease;
+
+  /* initial shadow */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hover effect 🔥 */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/*  */
 body{
     background-color: lightblue;
     margin: 0px;
