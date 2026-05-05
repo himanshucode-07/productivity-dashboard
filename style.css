@@ -1,49 +1,80 @@
-body{
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F4F0;
-    margin: 0px;
-    padding: 0px;
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f5f4f0;
+  margin: 0px;
+  padding: 0px;
 }
 
-#challenge{
+#challenge {
   display: grid;
   grid-template-columns: 180px 1fr 280px;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   gap: 10px;
-  flex-direction: column;
+  align-items: start;
+}
+
+.sidebar {
+  background: var(--surface);
+  width: 180px;
+  height: 100vh;
+  padding: 24px 16px;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar h1 {
+  font-size: 1rem;
+}
+
+.sidebar nav a {
+  padding: 10px 12px;
+  color: var(--text-2);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+.sidebar nav a:hover {
+  background: var(--bg);
+  color: var(--text-1);
+}
+
+.streak {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  margin-top: 24px;
+  background-color: rgb(145, 75, 14);
 }
 
 /* Study Hours */
-.Study-Hours{
-     background-color: #93b1b5;
-     border: 2px solid black;
-     height: 200px;
-     width: 150px;
+.Study-Hours {
+  background-color: #93b1b5;
+  border: 2px solid black;
+  height: 200px;
+  width: 150px;
 }
 
-.breakTime{
-   display: none;
+.breakTime {
+  display: none;
 }
 
 /* Water Intake */
-.Water-intake{
-    align-items: center;
-    justify-content: space-between;
-    width: 360px;
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
+.Water-intake {
+  align-items: center;
+  justify-content: space-between;
+  width: 360px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-.input-with-btn{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}    
+.input-with-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
 
 .btn {
   width: 50px;
@@ -60,37 +91,37 @@ body{
   background: #0056b3;
 }
 
-.water-intake-text{
-    font-size: 18px;
-    font-weight: bold;
+.water-intake-text {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.count{
-     color: #007bff;
+.count {
+  color: #007bff;
 }
 
 /* To-do */
-.Task-List{
-        background-color: #93b1b5;
-        border: 2px solid black;
-        height: 600px;
-        width: 500px;
+.Task-List {
+  background-color: #93b1b5;
+  border: 2px solid black;
+  height: 600px;
+  width: 500px;
 }
 
-#taskInput{
+#taskInput {
   width: 400px;
   height: 10px;
   padding: 10px;
 }
 
-#addTask{
-   width: 70px;
-   height: 35px;
+#addTask {
+  width: 70px;
+  height: 35px;
 }
 
-.Timer{
-     background-color: #93b1b5;
-     border: 2px solid black;
-     height: 200px;
-     width: 150px;
+.Timer {
+  background-color: #93b1b5;
+  border: 2px solid black;
+  height: 200px;
+  width: 150px;
 }

@@ -6,14 +6,37 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <title>FocusFlow</title>
   </head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
   <body>
     <!-- Study Hours  -->
     <div id="challenge">
-      <div class="Study-Hours">
+      <div class="sidebar">
+        <h1>FocusFlow</h1>
+        <nav>
+          <a href="#Task-List">Tasks</a>
+          <a href="#Study-Hours">Study</a>
+          <a href="#Water-intake">Intake</a>
+          <a href="#Timer">Timer</a>
+        </nav>
+
+        <div class="streak">7 day Streak</div>
+      </div>
+      
+      <div class="main">
+       <!-- Task-List -->
+       <div class="Task-List">
+        <input type="text" id="taskInput" placeholder="Add a task" />
+        <button id="addTask">Add Task</button>
+        <button id="remove">Remove</button>
+        <ul id="tasklist"></ul>
+       </div>
+      </div>
+
+      <div class="right-panel">
+
+        <div class="Study-Hours">
         <label for="Study-Hours"></label>Study Hours 1-24:
         <input
           type="number"
@@ -40,14 +63,9 @@
           <button class="resetBtn">reset</button>
         </div>
       </div>
-      <!-- Task-List -->
-      <div class="Task-List">
-        <input type="text" id="taskInput" placeholder="Add a task" />
-        <button id="addTask">Add Task</button>
-        <button id="remove">Remove</button>
-        <ul id="tasklist"></ul>
-      </div>
-      <!-- Timer -->
+
+
+        <!-- Timer -->
       <div class="Timer">
         <input
           type="time"
@@ -61,11 +79,8 @@
         <button class="task-complete">Complete Task</button>
         <button class="result">Result</button>
       </div>
-
-      <div id="taskPage"></div>
-      <div id="timerPage"></div>
-      <div id="waterPage"></div>
-      <div id="studyPage"></div>
+      </div>
+      
     </div>
     <script type="module" src="script.js"></script>
   </body>
