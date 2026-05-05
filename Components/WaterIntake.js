@@ -12,14 +12,14 @@ export class WaterIntake {
       this.span.innerText = this.count;
     });
     this.minusBtn.addEventListener("click", () => {
-      if (count > 0) {
-        count--;
+      if (this.count > 0) {
+        this.count--;
+        this.span.innerText = this.count;
       }
     });
     this.resetBtn.addEventListener("click", () => {
-      count = 0;
-      span.innerText = 0;
-      console.log("Reset button clicked");
+      this.count = 0;
+      this.span.innerText = 0;
     });
   }
 }

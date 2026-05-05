@@ -1,19 +1,3 @@
-let taskCard = document.querySelector("#taskCard");
-let challenge = document.querySelector("#challenge");
-let taskPage = document.querySelector("#taskPage");
-
-taskCard.addEventListener("click", () => {
-  challenge.style.display = "none";   // dashboard hide
-  taskPage.style.display = "block";   // task page show
-});
-
-let backBtn = document.querySelector("#backBtn");
-
-backBtn.addEventListener("click", () => {
-  taskPage.style.display = "none";
-  challenge.style.display = "block";
-});
-
 //     // Task List App 
 import { Tasklist } from "./Components/tasklist.js";
 
