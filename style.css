@@ -100,23 +100,96 @@ body {
   color: #007bff;
 }
 
+/* Greeting */
+.greeting {
+  padding: 24px 0 16px;
+}
+
+.greeting h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: 4px;
+}
+
+.greeting p {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
 /* To-do */
 .Task-List {
-  background-color: #93b1b5;
-  border: 2px solid black;
-  height: 600px;
-  width: 500px;
+  background: var(--surface);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  /* height: 600px;
+  width: 500px; */
+}
+
+.task-input-raw {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 #taskInput {
-  width: 400px;
-  height: 10px;
-  padding: 10px;
+  padding: 10px 12px;
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
 }
 
 #addTask {
-  width: 70px;
-  height: 35px;
+  padding: 10px 16px;
+  background: var(--purple);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+#tasklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-1);
+}
+
+#tasklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-1);
+}
+
+#tasklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-1);
+}
+
+#tasklist li:last-child {
+  border-bottom: none;
+}
+
+#tasklist li button {
+  background: none;
+  border: none;
+  color: var(--red);
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .Timer {

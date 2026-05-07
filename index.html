@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="variables.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>FocusFlow</title>
   </head>
   <body>
@@ -23,64 +26,67 @@
 
         <div class="streak">7 day Streak</div>
       </div>
-      
+
       <div class="main">
-       <!-- Task-List -->
-       <div class="Task-List">
-        <input type="text" id="taskInput" placeholder="Add a task" />
-        <button id="addTask">Add Task</button>
-        <button id="remove">Remove</button>
-        <ul id="tasklist"></ul>
-       </div>
-      </div>
-
-      <div class="right-panel">
-
-        <div class="Study-Hours">
-        <label for="Study-Hours"></label>Study Hours 1-24:
-        <input
-          type="number"
-          id="Study-Hours"
-          name="Study-Hours"
-          placeholder="Study Hours"
-          min="1"
-          max="24"
-        />
-        <button id="Save">Save</button>
-        <button class="Study-Started">Study</button>
-        <button class="breakTime">Break</button>
-        <button class="reset-session">Reset Session</button>
-      </div>
-      <!--Water-Intake  -->
-      <div class="Water-intake">
-        <h3>Water Intake</h3>
-        <div class="input-with-btn">
-          <button class="btn minus-btn">-</button>
-          <div class="water-intake-text">
-            Water Intake <span class="count">0</span>glass
+        <!-- Task-List -->
+        <div class="greeting">
+          <h2>Good morning 🌤️</h2>
+          <p>0 of 0 tasks done</p>
+        </div>
+        <div class="Task-List">
+          <h2>Tasks</h2>
+          <div class="task-input-raw">
+            <input type="text" id="taskInput" placeholder="Add a task" />
+            <button id="addTask">Add Task</button>
           </div>
-          <button class="btn plus-btn">+</button>
-          <button class="resetBtn">reset</button>
+          <ul id="tasklist"></ul>
         </div>
       </div>
 
+      <div class="right-panel">
+        <div class="Study-Hours">
+          <label for="Study-Hours"></label>Study Hours 1-24:
+          <input
+            type="number"
+            id="Study-Hours"
+            name="Study-Hours"
+            placeholder="Study Hours"
+            min="1"
+            max="24"
+          />
+          <button id="Save">Save</button>
+          <button class="Study-Started">Study</button>
+          <button class="breakTime">Break</button>
+          <button class="reset-session">Reset Session</button>
+        </div>
+        <!--Water-Intake  -->
+        <div class="Water-intake">
+          <h3>Water Intake</h3>
+          <div class="input-with-btn">
+            <button class="btn minus-btn">-</button>
+            <div class="water-intake-text">
+              Water Intake <span class="count">0</span>glass
+            </div>
+            <button class="btn plus-btn">+</button>
+            <button class="resetBtn">reset</button>
+          </div>
+        </div>
 
         <!-- Timer -->
-      <div class="Timer">
-        <input
-          type="time"
-          step="1"
-          value="00:00:00"
-          id="timerInput"
-          placeholder="time"
-        />
-        <button id="startTimer">Start Timer</button>
-        <button id="stopTimer">Stop Timer</button>
-        <button class="task-complete">Complete Task</button>
-        <button class="result">Result</button>
+        <div class="Timer">
+          <input
+            type="time"
+            step="1"
+            value="00:00:00"
+            id="timerInput"
+            placeholder="time"
+          />
+          <button id="startTimer">Start Timer</button>
+          <button id="stopTimer">Stop Timer</button>
+          <button class="task-complete">Complete Task</button>
+          <button class="result">Result</button>
+        </div>
       </div>
-      </div>
-      
     </div>
     <script type="module" src="script.js"></script>
   </body>
