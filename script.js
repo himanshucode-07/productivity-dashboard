@@ -20,3 +20,8 @@ Timerapp.init();
 import {StudyHours} from "./Components/StudyHours.js";
 let Study = new StudyHours();
 Study.init();
+
+// greeting
+import { greeting } from "./greeting.js";
+const Greeting = new greeting();
+Greeting.init();
