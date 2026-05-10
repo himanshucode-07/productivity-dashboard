@@ -59,45 +59,83 @@ body {
 }
 
 /* Water Intake */
+
 .Water-intake {
-  align-items: center;
-  justify-content: space-between;
-  width: 360px;
   padding: 20px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.input-with-btn {
+.water-arc-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 12px auto;
+}
+
+.water-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.water-count .count {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-1);
+  display: block;
+}
+
+.water-count .water-total {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.widget-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-2);
+  letter-spacing: 0.08em;
+}
+
+.water-glasses {
+  font-size: 13px;
+  color: var(--text-2);
+  text-align: center;
+}
+
+.water-buttons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
 }
 
 .btn {
-  width: 50px;
-  height: 50px;
-  font-size: 28px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background: #007bff;
+  background: var(--purple);
   color: white;
 }
 
 .btn:hover {
-  background: #0056b3;
+  opacity: 0.85;
 }
 
-.water-intake-text {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.count {
-  color: #007bff;
+.resetBtn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-2);
 }
 
 /* Greeting */

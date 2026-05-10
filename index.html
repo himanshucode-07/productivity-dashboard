@@ -61,12 +61,46 @@
         </div>
         <!--Water-Intake  -->
         <div class="Water-intake">
-          <h3>Water Intake</h3>
-          <div class="input-with-btn">
-            <button class="btn minus-btn">-</button>
-            <div class="water-intake-text">
-              Water Intake <span class="count">0</span>glass
+          <p class="widget-label">WATER INTAKE</p>
+
+          <div class="water-arc-container">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+              <!-- Track circle -->
+              <circle
+                cx="60"
+                cy="60"
+                r="45"
+                fill="none"
+                stroke="#E2E1DC"
+                stroke-width="8"
+              />
+              <!-- Progress circle -->
+              <circle
+                class="water-progress"
+                cx="60"
+                cy="60"
+                r="45"
+                fill="none"
+                stroke="#3B82F6"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+                transform="rotate(-90 60 60)"
+              />
+            </svg>
+            <!-- Count center mein -->
+            <div class="water-count">
+              <span class="count">0</span>
+              <span class="water-total">of 8</span>
             </div>
+          </div>
+
+          <p class="water-glasses">glasses</p>
+
+          <!-- Buttons -->
+          <div class="water-buttons">
+            <button class="btn minus-btn">−</button>
             <button class="btn plus-btn">+</button>
             <button class="resetBtn">reset</button>
           </div>
