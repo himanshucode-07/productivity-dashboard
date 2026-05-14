@@ -44,21 +44,37 @@
       </div>
 
       <div class="right-panel">
-        <div class="Study-Hours">
-          <label for="Study-Hours"></label>Study Hours 1-24:
+       <div class="Study-Hours">
+        <p class="widget-label">STUDY HOURS</p>
+        
+        <!-- Block grid -->
+        <div class="study-blocks" id="studyBlocks"></div>
+        
+        <!-- Time display -->
+        <div class="study-time-display">
+          <span class="study-hours-count">0h 0m</span>
+          <span class="study-goal">goal <span id="studyGoal">6</span>h</span>
+        </div>
+
+        <!-- Input + Save -->
+        <div class="study-input-row">
           <input
             type="number"
             id="Study-Hours"
-            name="Study-Hours"
-            placeholder="Study Hours"
+            placeholder="Set goal"
             min="1"
             max="24"
           />
           <button id="Save">Save</button>
+        </div>
+
+        <!-- Control buttons -->
+        <div class="study-controls">
           <button class="Study-Started">Study</button>
           <button class="breakTime">Break</button>
-          <button class="reset-session">Reset Session</button>
+          <button class="reset-session">Reset</button>
         </div>
+      </div>
         <!--Water-Intake  -->
         <div class="Water-intake">
           <p class="widget-label">WATER INTAKE</p>

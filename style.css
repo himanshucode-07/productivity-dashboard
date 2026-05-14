@@ -48,12 +48,82 @@ body {
 
 /* Study Hours */
 .Study-Hours {
-  background-color: #93b1b5;
-  border: 2px solid black;
-  height: 200px;
-  width: 150px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
 }
 
+.study-blocks {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  margin: 12px 0;
+}
+
+.study-block {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: #E8E7E2;
+  transition: background 0.3s ease;
+}
+
+.study-block.filled {
+  background: var(--green);
+}
+
+.study-time-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.study-hours-count {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.study-goal {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.study-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.study-input-row input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+
+.study-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.study-controls button {
+  flex: 1;
+  padding: 6px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.study-controls button:hover {
+  background: var(--bg);
+  color: var(--text-1);
+}
 .breakTime {
   display: none;
 }
