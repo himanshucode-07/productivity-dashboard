@@ -1,66 +1,74 @@
 export class Timer {
   constructor() {
     this.timerInput = document.querySelector("#timerInput");
-    this.startTimer = document.querySelector("#startTimer");
-    this.stopTimer = document.querySelector("#stopTimer");
-    this.resetTimer = document.querySelector(".reset");
-    this.emptyTimer = document.querySelector(".empty");
-    this.result = document.querySelector(".result");
-    this.task = document.querySelector(".task-complete");
+    this.startBtn = document.querySelector("#startTimer");
+    this.stopBtn = document.querySelector("#stopTimer");
+    this.completeBtn = document.querySelector(".task-complete");
+    this.timerDisplay = document.querySelector("#timerDisplay");
+    this.progressCircle = document.querySelector(".timer-progress");
 
     this.timer = null;
-    this.endTime;
+    this.totalSeconds = 0;
+    this.remainingSeconds = 0;
+    this.circumference = 282.7;
   }
+
+  updateArc() {
+    const progress = this.remainingSeconds / this.totalSeconds;
+    const offset = this.circumference * (1 - progress);
+    this.progressCircle.style.strokeDashoffset = offset;
+  }
+
+  updateDisplay() {
+    const m = Math.floor(this.remainingSeconds / 60);
+    const s = this.remainingSeconds % 60;
+    this.timerDisplay.innerText = `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  }
+
+  reset() {
+    clearInterval(this.timer);
+    this.timer = null;
+    this.remainingSeconds = this.totalSeconds;
+    this.progressCircle.style.strokeDashoffset = 0;
+    this.updateDisplay();
+  }
+
   init() {
+    this.startBtn.addEventListener("click", () => {
+      const minutes = Number(this.timerInput.value);
+      if (!minutes || minutes < 1) return;
 
-    this.result.addEventListener("click", () => {
-      console.log("Prrint result")
-    })
-    // 
-    this.startTimer.addEventListener("click", () => {
+      this.totalSeconds = minutes * 60;
+      this.remainingSeconds = this.totalSeconds;
+      this.progressCircle.style.strokeDashoffset = 0;
+      this.updateDisplay();
 
-    let parts = this.timerInput.value.split(":");
+      clearInterval(this.timer);
 
-    let hour = Number(parts[0]);
-    let minute = Number(parts[1]);
-    let second = Number(parts[2]);
+      this.timer = setInterval(() => {
+        this.remainingSeconds--;
+        this.updateDisplay();
+        this.updateArc();
 
-    let totalSeconds = hour * 3600 + minute * 60 + second;
-
-    this.endTime = Date.now() + totalSeconds * 1000;
-
-    clearInterval(this.timer);
-
-    this.timer = setInterval(() => {
-
-        let remaining = Math.floor((this.endTime - Date.now()) / 1000);
-
-        if (remaining <= 0) {
-            clearInterval(this.timer);
-            this.timerInput.value = "00:00:00";
-            return;
+        if (this.remainingSeconds <= 0) {
+          clearInterval(this.timer);
+          this.timerDisplay.innerText = "Done!";
+          this.progressCircle.style.strokeDashoffset = this.circumference;
         }
+      }, 1000);
+    });
 
-        let h = Math.floor(remaining / 3600);
-        let m = Math.floor((remaining % 3600) / 60);
-        let s = remaining % 60;
+    this.stopBtn.addEventListener("click", () => {
+      clearInterval(this.timer);
+      this.timer = null;
+    });
 
-        h = String(h).padStart(2,"0");
-        m = String(m).padStart(2,"0");
-        s = String(s).padStart(2,"0");
-
-        this.timerInput.value = `${h}:${m}:${s}`;
-
-    },1000);
-});
-
-this.stopTimer.addEventListener("click", () => {
-    clearInterval(this.timer);
-});
-
-this.task.addEventListener("click", () => {
-    clearInterval(this.timer);
-    this.timerInput.value = "00:00:00";
-});
+    this.completeBtn.addEventListener("click", () => {
+      clearInterval(this.timer);
+      this.timer = null;
+      this.remainingSeconds = 0;
+      this.timerDisplay.innerText = "00:00";
+      this.progressCircle.style.strokeDashoffset = this.circumference;
+    });
   }
 }

@@ -44,37 +44,37 @@
       </div>
 
       <div class="right-panel">
-       <div class="Study-Hours">
-        <p class="widget-label">STUDY HOURS</p>
-        
-        <!-- Block grid -->
-        <div class="study-blocks" id="studyBlocks"></div>
-        
-        <!-- Time display -->
-        <div class="study-time-display">
-          <span class="study-hours-count">0h 0m</span>
-          <span class="study-goal">goal <span id="studyGoal">6</span>h</span>
-        </div>
+        <div class="Study-Hours">
+          <p class="widget-label">STUDY HOURS</p>
 
-        <!-- Input + Save -->
-        <div class="study-input-row">
-          <input
-            type="number"
-            id="Study-Hours"
-            placeholder="Set goal"
-            min="1"
-            max="24"
-          />
-          <button id="Save">Save</button>
-        </div>
+          <!-- Block grid -->
+          <div class="study-blocks" id="studyBlocks"></div>
 
-        <!-- Control buttons -->
-        <div class="study-controls">
-          <button class="Study-Started">Study</button>
-          <button class="breakTime">Break</button>
-          <button class="reset-session">Reset</button>
+          <!-- Time display -->
+          <div class="study-time-display">
+            <span class="study-hours-count">0h 0m</span>
+            <span class="study-goal">goal <span id="studyGoal">6</span>h</span>
+          </div>
+
+          <!-- Input + Save -->
+          <div class="study-input-row">
+            <input
+              type="number"
+              id="Study-Hours"
+              placeholder="Set goal"
+              min="1"
+              max="24"
+            />
+            <button id="Save">Save</button>
+          </div>
+
+          <!-- Control buttons -->
+          <div class="study-controls">
+            <button class="Study-Started">Study</button>
+            <button class="breakTime">Break</button>
+            <button class="reset-session">Reset</button>
+          </div>
         </div>
-      </div>
         <!--Water-Intake  -->
         <div class="Water-intake">
           <p class="widget-label">WATER INTAKE</p>
@@ -124,17 +124,61 @@
 
         <!-- Timer -->
         <div class="Timer">
-          <input
-            type="time"
-            step="1"
-            value="00:00:00"
-            id="timerInput"
-            placeholder="time"
-          />
-          <button id="startTimer">Start Timer</button>
-          <button id="stopTimer">Stop Timer</button>
-          <button class="task-complete">Complete Task</button>
-          <button class="result">Result</button>
+          <p class="widget-label">FOCUS TIMER</p>
+
+          <div class="timer-arc-container">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+              <!-- Track circle -->
+              <circle
+                cx="60"
+                cy="60"
+                r="45"
+                fill="none"
+                stroke="#E2E1DC"
+                stroke-width="8"
+              />
+              <!-- Progress circle -->
+              <circle
+                class="timer-progress"
+                cx="60"
+                cy="60"
+                r="45"
+                fill="none"
+                stroke="var(--purple)"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="0"
+                transform="rotate(-90 60 60)"
+              />
+            </svg>
+
+            <!-- Time center mein -->
+            <div class="timer-count">
+              <span id="timerDisplay">25:00</span>
+            </div>
+          </div>
+
+          <p class="timer-session-label">Deep Work · Session 1</p>
+
+          <!-- Input -->
+          <div class="timer-input-row">
+            <input
+              type="number"
+              id="timerInput"
+              placeholder="Minutes"
+              min="1"
+              max="60"
+              value="25"
+            />
+          </div>
+
+          <!-- Buttons -->
+          <div class="timer-controls">
+            <button id="startTimer">Start</button>
+            <button id="stopTimer">Pause</button>
+            <button class="task-complete">Complete</button>
+          </div>
         </div>
       </div>
     </div>
