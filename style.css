@@ -13,6 +13,12 @@ body {
   align-items: start;
 }
 
+.main {
+  padding: 0 24px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
 .sidebar {
   background: var(--surface);
   width: 180px;
@@ -47,6 +53,7 @@ body {
 }
 
 /* Study Hours */
+
 .Study-Hours {
   padding: 20px;
   background: white;
@@ -128,6 +135,15 @@ body {
   display: none;
 }
 
+#Save {
+  padding: 6px 14px;
+  background: var(--purple);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+}
 /* Water Intake */
 
 .Water-intake {
@@ -258,25 +274,6 @@ body {
   cursor: pointer;
 }
 
-#tasklist li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 14px;
-  color: var(--text-1);
-}
-
-#tasklist li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 14px;
-  color: var(--text-1);
-}
 
 #tasklist li {
   display: flex;
@@ -379,4 +376,28 @@ body {
   background: var(--bg);
   color: var(--text-1);
   border: 1px solid var(--border) !important;
+}
+
+/* Right panel */
+
+.right-panel {
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.Study-Hours,
+.Water-intake,
+.Timer {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.Timer {
+  border-bottom: none;
 }
